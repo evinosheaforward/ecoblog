@@ -10,6 +10,8 @@ COPY ./frontend ./
 
 RUN npm install
 
+RUN npm install react-router-dom
+
 CMD if [ ${APP_ENV} = production ]; \
 	then \
 	npm install -g http-server && \
