@@ -1,27 +1,15 @@
-import React, { Component } from 'react';
-import Page from './Page';
+import { createStore, applyMiddleware, combineReducers } from 'react-redux';
+import thunk from 'redux-thunk';
 
-const PageContext = React.createContext();
+const initialState = {
+	title: "Home",
+	content: "",
+};
 
-export default PageContext;
+const middleware = [thunk];
 
-class PageProvider {
-	state = {
-		title: "Home",
-		content: "",
-		update: (t, c) => {
-			this.setState({
-				title: t,
-				content: c,
-			})
-		}
-	}
+rootReducer
 
-	render() {
-		return (
-			<PageContext.Provider value={this.state}>
-				{this.props.children}
-			</PageContext.Provider>
-		);
-	}
-}
+const store = createStore(rootReducer, initialState, applyMiddleware(...middleware))
+
+export default store;

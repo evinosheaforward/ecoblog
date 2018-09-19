@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import PageContext from './Page.jsx';
+
+import Article from './Article.jsx'
 
 const blogs = [
 	{
@@ -14,13 +15,16 @@ const blogs = [
 ]
 
 class ArticlePreviews extends Component {
-	static displayName = "ArticlePreviews";
 	render() {
 		var articles = blogs.map( ( {title, content} ) =>
 			<h2>
+				<br/>
 				<ArticlePreview
+					updatePage={this.props.updatePage}
 					title={title}
 					content={content}/>
+				<br/>
+				<br/>
 			</h2>
 		);
 		return (
@@ -32,24 +36,32 @@ class ArticlePreviews extends Component {
 export default ArticlePreviews;
 
 class ArticlePreview extends Component {
+	constructor(props) {
+		super(props);
+	}
   render() {
 		var title = this.props.title;
 		var content = this.props.content;
     return (
-			<Router>
-				<Link onClick={this.forceUpdate} to="/blogs">
-					{title}
-				</Link>
-			</Router>
+			<div>
+				<Router>
+					<Link
+						onClick={() => this.handlePageChange(
+							title,
+							content)}
+						to={`/blogs/${title}`}>
+
+						{title}
+					</Link>
+				</Router>
+					<Route
+						exact path={`/blogs/${title}`}
+						component={() => <Article
+							updatePage={this.props.updatePage}
+							title={title}
+							content={content} />}
+					/>
+				</div>
 		);
   }
 }
-// <PageContext.Consumer>
-// 	{(context) => {
-//  <button	onClick={context.update(
-// 		title,
-// 		content)}>
-//    <Link to={`/blogs/${title}`}>
-// 	</button>
-// 	}}
-// </PageContext.Consumer>

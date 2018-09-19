@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import PageContext from './Page.jsx';
 
 class Article extends Component {
-	static displayName = "Article";
+	handlePageChange(t, c) {
+    this.props.updatePage(t, c);
+  }
   render() {
     return (
 			<Router>
 				<div>
-					<Link onClick={this.forceUpdate} to="/">
-						Back to Home
+					<br/>
+					<Link to="/" onClick={() => this.handlePageChange("Home", "")}>
+						Colapse Article
 					</Link>
-					<h2>
-						MY TITLE
-					</h2>
+					<br/>
 					<section>
-						MY OPINION
+						{this.props.content}
 					</section>
 				</div>
 			</Router>
@@ -28,13 +28,5 @@ export default Article;
 // <PageContext.Consumer>
 // 	 {(context) => {
 //
-//   <button	onClick={context.update("Home", "")}>
-//   </button>
-// 		<h2>
-// 			{context.title}
-// 		</h2>
-// 		<section>
-// 			{context.content}
-// 		</section>
-//   }}
+
 // </PageContext.Consumer>

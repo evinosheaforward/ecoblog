@@ -12,6 +12,8 @@ RUN npm install
 
 RUN npm install react-router-dom
 
+RUN npm install semantic-ui-react
+
 CMD if [ ${APP_ENV} = production ]; \
 	then \
 	npm install -g http-server && \
