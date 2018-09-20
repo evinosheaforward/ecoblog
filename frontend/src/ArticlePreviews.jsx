@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
+
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Col from 'react-bootstrap/lib/Col';
+import Row from 'react-bootstrap/lib/Row';
+import Grid from 'react-bootstrap/lib/Grid';
 
-import Article from './Article.jsx'
+import Article from './Article.jsx';
+import blogs from './blogs.jsx';
 
-const blogs = [
-	{
-		title: "My first blog",
-		content: "Contents of blog",
-	},
-	{
-		title: "My second blog",
-		content: "better content"
-	},
-]
+import './Article.css';
 
 class ArticlePreviews extends Component {
 	render() {
 		var articles = blogs.map( ( {title, content} ) =>
-			<h2>
-				<br/>
-				<ArticlePreview
+		<div>
+			<br/>
+			<ArticlePreview
 					updatePage={this.props.updatePage}
 					title={title}
 					content={content}/>
-				<br/>
-				<br/>
-			</h2>
-		);
+			<br/>
+		</div>
+	);
 		return (
-      <div>{articles}</div>
+      <div>
+				<br/>
+				{articles}
+			</div>
 		);
 	}
 }
@@ -39,7 +37,10 @@ class ArticlePreview extends Component {
 	constructor(props) {
 		super(props);
 	}
-  render() {
+	handlePageChange(t, c) {
+    this.props.updatePage(t, c);
+  }
+	render() {
 		var title = this.props.title;
 		var content = this.props.content;
     return (
@@ -47,10 +48,9 @@ class ArticlePreview extends Component {
 				<Router>
 					<Link
 						onClick={() => this.handlePageChange(
-							title,
-							content)}
+            	title,
+            	content)}
 						to={`/blogs/${title}`}>
-
 						{title}
 					</Link>
 				</Router>

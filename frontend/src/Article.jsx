@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
+import './Article.css';
+
 class Article extends Component {
-	handlePageChange(t, c) {
-    this.props.updatePage(t, c);
-  }
   render() {
+		var paragraphs = this.props.content.map( ( par ) =>
+				<p>
+					{par}
+				</p>
+		);
     return (
 			<Router>
 				<div>
@@ -13,9 +17,9 @@ class Article extends Component {
 					<Link to="/" onClick={() => this.handlePageChange("Home", "")}>
 						Colapse Article
 					</Link>
-					<br/>
 					<section>
-						{this.props.content}
+						<br/>
+						{paragraphs}
 					</section>
 				</div>
 			</Router>
