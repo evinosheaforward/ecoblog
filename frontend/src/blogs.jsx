@@ -1,7 +1,7 @@
 const blogs = [
 	{
 		title: "PANTHEISM",
-		content: [
+		content:
 			`Panthesim, whether or not it is the correct objective truth of everything,
 is (in my opinion) the most pragmatic and simple interpretation of the world.
 \n\n
@@ -42,10 +42,10 @@ Then the universe must contain those truths {my_truth, your_truth} \sub {univers
 (read: the set my_truth, your_truth is a subset of the set of the universe)
 Here, I am using subset as an analogy, there are other mathematical statements
 that means "this math is contained in this other math" (For example: homomorphisms).
-`]},
+`},
 	{
 		title: "THE DETERMINISTIC NATURE OF QUANTUM MECHANICS",
-		content: [`In physics - quantum mechanics in particular - the state of the universe,
+		content: `In physics - quantum mechanics in particular - the state of the universe,
 or a "subset" of it (one, two, or many particles), is described by a "state vector".
 A vector is mathematical object that holds information. "State" in physics just
 means "the information that fully describes the physical system". The state of
@@ -94,11 +94,11 @@ device (this can be done in a mathematically rigorous way) and the final result
 is that the outcome is probabilistic (50-50 for the stern and Gerlache)
 \n\n
 Conservation of energy is equivalent to the conservation of information.
-`]
+`
 	},
 	{
 		title: "MORALITY AND WORLD AGENDA",
-		content: [
+		content:
 			`I follow the moral idealization of utilitarianism (the moral philosophy). The
 goal is to work toward the most happiness in the world. Though the philosophy
 cannot be implemented in practice, I think that this is the right goal.
@@ -191,7 +191,7 @@ they are. Though agriculture came with power imbalances, it was truly the
 sacrifice of farmers that has led us to our market economies. Therefore, it
 makes sense that large entities that have a lot of power must exist as
 otherwise we could not have the market economy that we do.
-`]
+`
 	}
 ]
 
