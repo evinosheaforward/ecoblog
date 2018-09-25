@@ -34,9 +34,6 @@ class ArticlePreviews extends Component {
 export default ArticlePreviews;
 
 class ArticlePreview extends Component {
-	constructor(props) {
-		super(props);
-	}
 	handlePageChange(t, c) {
     this.props.updatePage(t, c);
   }

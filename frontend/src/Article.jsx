@@ -1,36 +1,31 @@
 import React, { Component } from 'react';
+
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Text from 'react-format-text';
 
 import './Article.css';
 
 class Article extends Component {
+	handlePageChange(t, c) {
+    this.props.updatePage(t, c);
+  }
   render() {
-		var paragraphs = this.props.content.map( ( par ) =>
-				<p>
-					{par}
-				</p>
-		);
+		var content = this.props.content;
     return (
 			<Router>
-				<div>
+				<p>
 					<br/>
 					<Link to="/" onClick={() => this.handlePageChange("Home", "")}>
 						Colapse Article
 					</Link>
 					<section>
 						<br/>
-						{paragraphs}
+						{content}
 					</section>
-				</div>
+				</p>
 			</Router>
     );
   }
 }
 
 export default Article;
-
-// <PageContext.Consumer>
-// 	 {(context) => {
-//
-
-// </PageContext.Consumer>
