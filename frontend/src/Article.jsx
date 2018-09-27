@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import Text from 'react-format-text';
+
+import { Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import './Article.css';
 
@@ -13,16 +15,18 @@ class Article extends Component {
 		var content = this.props.content;
     return (
 			<Router>
-				<p>
+				<section>
 					<br/>
-					<Link to="/" onClick={() => this.handlePageChange("Home", "")}>
-						Colapse Article
-					</Link>
-					<section>
-						<br/>
+					<LinkContainer to="/" onClick={() => this.handlePageChange("Home", "")}>
+						<Button>
+							Colapse Article
+						</Button>
+					</LinkContainer>
+					<br/>
+					<p className="ArticleContent">
 						{content}
-					</section>
-				</p>
+					</p>
+				</section>
 			</Router>
     );
   }

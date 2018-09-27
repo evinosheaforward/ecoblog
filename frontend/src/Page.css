@@ -3,3 +3,14 @@ body {
 	padding: 20px;
 	font-size: medium;
 }
+
+.Headtext {
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: justify;
+  text-justify: inter-word;
+	background-color: transparent;
+	font-size: 1.5em;
+	color: #ff77ff;
+	align-content: left;
+}

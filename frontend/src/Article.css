@@ -1,13 +1,18 @@
-section {
-	font-size: medium;
+
+.ArticleContent {
 	padding-right: 20px;
 	padding-left: 20px;
 	text-align: justify;
   text-justify: inter-word;
+	background-color: transparent;
+	font-size: 1.5em;
+	color: #ff37ff;
+	align-content: left;
+	border: solid #ff37ff;
 }
 
-Link {
-	font-size: large;
-	padding-right: 40px;
-	padding-left: 40px;
+.LinkContainer {
+	position: 'absolute';
+	bottom: 0;
+	right: 100;
 }

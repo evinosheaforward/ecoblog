@@ -23,8 +23,10 @@ class Page extends Component {
 		return (
 			<body>
 				<br/>
+				<p className="Headtext">
 					I wanted to make a blog to share my thoughts on the world,
 					and get some experience making a small website! Enjoy!
+				</p>
 				<br/>
 				<ArticlePreviews/>
 			</body>

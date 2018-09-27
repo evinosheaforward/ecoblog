@@ -4,25 +4,51 @@
 
 .App-logo {
   /* animation: App-logo-spin infinite 20s linear; */
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+	background-color: #222;
+  height: 180px;
   padding: 20px;
-  color: white;
+	border:4px solid #ff53ff;
+	background-image: url("./background_image.png");
 }
 
 .App-title {
   font-size: 1.5em;
+	color: #ff53ff;
+	align-content: left;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #ff53ff;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import Col from 'react-bootstrap/lib/Col';
-import Row from 'react-bootstrap/lib/Row';
-import Grid from 'react-bootstrap/lib/Grid';
+import { Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+//import { Button } from 'react-router-bootstrap';
+// import Col from 'react-bootstrap/lib/Col';
+// import Row from 'react-bootstrap/lib/Row';
+// import Grid from 'react-bootstrap/lib/Grid';
 
 import Article from './Article.jsx';
 import blogs from './blogs.jsx';
@@ -16,7 +19,6 @@ class ArticlePreviews extends Component {
 		<div>
 			<br/>
 			<ArticlePreview
-					updatePage={this.props.updatePage}
 					title={title}
 					content={content}/>
 			<br/>
@@ -35,21 +37,24 @@ export default ArticlePreviews;
 
 class ArticlePreview extends Component {
 	handlePageChange(t, c) {
-    this.props.updatePage(t, c);
-  }
+		this.props.updatePage(t, c);
+	}
 	render() {
 		var title = this.props.title;
 		var content = this.props.content;
     return (
 			<div>
 				<Router>
-					<Link
+					<LinkContainer
+						to={`/blogs/${title}`}
 						onClick={() => this.handlePageChange(
-            	title,
-            	content)}
-						to={`/blogs/${title}`}>
-						{title}
-					</Link>
+	            	title,
+	            	content)}
+					>
+						<Button>
+							{title}
+						</Button>
+				</LinkContainer>
 				</Router>
 					<Route
 						exact path={`/blogs/${title}`}
