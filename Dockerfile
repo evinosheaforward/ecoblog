@@ -13,6 +13,7 @@ RUN npm install
 RUN npm install react-router-dom
 RUN npm install --save react react-dom
 RUN	npm install --save react-bootstrap
+RUN npm install --save react-router-bootstrap
 RUN npm install semantic-ui-react
 RUN npm install react-format-text
 

@@ -2,7 +2,7 @@ const blogs = [
 	{
 		title: "PANTHEISM",
 		content:
-			`Panthesim, whether or not it is the correct objective truth of everything,
+			`Pantheism,
 is (in my opinion) the most pragmatic and simple interpretation of the world.
 \n\n
 Pantheism is simple, because it is derived from truths, observations about
@@ -14,7 +14,7 @@ Pantheism is pragmatic, because it does not revolve around unanswerable question
 It is an acceptance of truths (and the search to uncover them).
 \n\n
 The words "real", "physical", and "exist" are synonyms to me.
-The words "nature", "universe", "everything", "physics" and "God" are synonyms to me.
+The words "nature", "universe", "everything", "the laws of physics" and "God" are synonyms to me.
 \n\n
 Pantheism is derived from the following postulates:
 \n\n
@@ -24,16 +24,16 @@ Pantheism is derived from the following postulates:
 \n\n
 I think therefore I am. If I had a thought, and know I had a thought, I just
 have to believe in time and I can say that that thought existed then, and I exist
-now in time.
+now.
 \n\n
-I have observed the passing of time and I accept its nature (see: special relativity).
+I have observed the passing of time and I accept what it is.
 \n\n
-The second postulate is - the belief that others experiences and realities are also real
+The second postulate is - the belief that others experiences and realities are also real.
 \n\n
-This is natural to assume, as what could be fundamentally different between humans
-such that only my existence is real.
+The second postulate is fundamental, because it says that
+we are all equal (in that we all exist).
 \n\n
-If there are many perceptions of the world that are valid, then the universe must
+So, if there are many perceptions of the world that are valid, then the universe must
 contain all of our experiences. Put another way, one human's experience is just
 a part of the universe. This can also be stated as: there is objective truth.
 \n\n
