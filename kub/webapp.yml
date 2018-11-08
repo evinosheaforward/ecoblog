@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: webapp
   labels:
-    app: ecoblog
+    app: kappa
     tier: frontend
 spec:
   replicas: 2
@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ecoblog
+        app: kappa
         tier: frontend
     spec:
       containers:
